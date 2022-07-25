@@ -33,8 +33,6 @@ func Execute() {
 	cmd := rootCmd.Commands()
 	for _, a := range cmd {
 		for _, b := range os.Args[1:] {
-			fmt.Println(a.Name())
-			fmt.Println(a.Aliases)
 			if a.Name() == b || contains(a.Aliases, b) {
 				cmdFound = true
 				break
