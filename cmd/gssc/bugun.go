@@ -57,9 +57,7 @@ var todaysHeadersCmd = &cobra.Command{
 				break
 			}
 		}
-		fmt.Println(selectedHeader)
 		headerEntriesToday := gssc.EntriesToday(selectedHeader)
-		fmt.Println(headerEntriesToday)
 		for _, v := range headerEntriesToday.Entryler {
 			fmt.Println(v.Mesaj)
 			fmt.Println(v.Tarih)

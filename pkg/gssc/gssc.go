@@ -59,7 +59,6 @@ func EntriesToday(headerId int) (resultData EntriesTodayResponse) {
 
 		}
 	}(resp.Body)
-	fmt.Println("Response status:", resp.Status)
 
 	if resp.StatusCode != 200 {
 		log.Fatal(":(")
