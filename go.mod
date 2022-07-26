@@ -3,8 +3,8 @@ module github.com/asyard/gssc
 go 1.18
 
 require (
-	github.com/spf13/cobra v1.5.0
 	github.com/manifoldco/promptui v0.9.0
+	github.com/spf13/cobra v1.5.0
 )
 
 require (

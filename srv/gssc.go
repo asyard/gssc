@@ -27,6 +27,9 @@ func HeadersToday() (resultData HeadersTodayResponse) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var todayHeadersResp HeadersTodayResponse
 	if err := json.Unmarshal(body, &todayHeadersResp); err != nil { // Parse []byte to go struct pointer
@@ -53,6 +56,9 @@ func EntriesToday(headerId int) (resultData EntriesTodayResponse) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var todayResp EntriesTodayResponse
 	if err := json.Unmarshal(body, &todayResp); err != nil { // Parse []byte to go struct pointer
@@ -78,7 +84,9 @@ func AgendaToday() (resultData AgendaTodayResponse) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
-
+	if err != nil {
+		log.Fatal(err)
+	}
 	var todayAgendaResp AgendaTodayResponse
 	if err := json.Unmarshal(body, &todayAgendaResp); err != nil { // Parse []byte to go struct pointer
 		fmt.Println("Can not unmarshal JSON")
@@ -103,7 +111,9 @@ func GetEntry(entryId string) (resultData SingleEntry) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
-
+	if err != nil {
+		log.Fatal(err)
+	}
 	var singleEntry SingleEntry
 	if err := json.Unmarshal(body, &singleEntry); err != nil { // Parse []byte to go struct pointer
 		fmt.Println("Can not unmarshal JSON")
@@ -128,6 +138,9 @@ func GetAuthor(authorNick string) (resultData AuthorData) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var authorData AuthorData
 	if err := json.Unmarshal(body, &authorData); err != nil { // Parse []byte to go struct pointer
@@ -153,6 +166,9 @@ func GetAuthorEntryStats(authorNick string) (resultData AuthorEntryStats) {
 	}
 
 	body, err := ioutil.ReadAll(resp.Body) // response body is []byte
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var authorEntryData AuthorEntryStats
 	if err := json.Unmarshal(body, &authorEntryData); err != nil { // Parse []byte to go struct pointer
