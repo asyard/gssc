@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-var version = "0.0.1"
+var version = "0.1"
 var rootCmd = &cobra.Command{
 	Use:     "gssc",
 	Version: version,
