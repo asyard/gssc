@@ -1,4 +1,4 @@
-package pkg
+package srv
 
 const (
 	GsscApiHeadersToday         = "https://rerererarara.net/api/v1/basliklar/bugun"

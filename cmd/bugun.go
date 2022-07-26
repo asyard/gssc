@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/asyard/gssc/pkg/gssc"
+	"github.com/asyard/gssc/srv"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 	"strconv"
@@ -15,7 +15,7 @@ var todaysHeadersCmd = &cobra.Command{
 	Short:   "Gunun basliklarini (yeniden eskiye) listeler",
 	Args:    cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
-		res := gssc.HeadersToday()
+		res := srv.HeadersToday()
 
 		fmt.Println("Gunun basliklari (" + res.Date + ")")
 		fmt.Println("Baslik sayisi : " + strconv.Itoa(res.TotalCount))
@@ -57,11 +57,12 @@ var todaysHeadersCmd = &cobra.Command{
 				break
 			}
 		}
-		headerEntriesToday := gssc.EntriesToday(selectedHeader)
+		headerEntriesToday := srv.EntriesToday(selectedHeader)
 		for _, v := range headerEntriesToday.Entryler {
 			fmt.Println(v.Mesaj)
 			fmt.Println(v.Tarih)
 			fmt.Println(v.Yazar)
+			fmt.Println("-----")
 		}
 	},
 }

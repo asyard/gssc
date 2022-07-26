@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -19,17 +18,17 @@ https://rerererarara.net/api/`,
 	},
 }
 
-func contains(s []string, e string) bool {
+/*func contains(s []string, e string) bool {
 	for _, a := range s {
 		if a == e {
 			return true
 		}
 	}
 	return false
-}
+}*/
 
 func Execute() {
-	var cmdFound bool
+	/*var cmdFound bool
 	cmd := rootCmd.Commands()
 	for _, a := range cmd {
 		for _, b := range os.Args[1:] {
@@ -38,15 +37,18 @@ func Execute() {
 				break
 			}
 		}
-	}
+	}*/
 
-	if !cmdFound {
-		args := append([]string{"today"}, os.Args[1:]...)
-		rootCmd.SetArgs(args)
-	}
+	/*if !cmdFound {
+		//args := append([]string{"today"}, os.Args[1:]...)
+		//rootCmd.SetArgs(args)
+	}*/
 
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Fprintf(os.Stderr, "Beklenmedik bir seyler oldu, calismadi ya\n")
 		os.Exit(1)
 	}
+}
+
+func init() {
+	rootCmd.CompletionOptions.HiddenDefaultCmd = true
 }

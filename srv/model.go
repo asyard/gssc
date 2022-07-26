@@ -1,4 +1,4 @@
-package pkg
+package srv
 
 type HeadersTodayResponse struct {
 	Header     string `json:"liste"`

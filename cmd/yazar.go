@@ -2,18 +2,18 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/asyard/gssc/pkg/gssc"
+	"github.com/asyard/gssc/srv"
 	"github.com/spf13/cobra"
 	"strconv"
 )
 
 var authorCmd = &cobra.Command{
-	Use:     "author",
-	Aliases: []string{"yazar"},
+	Use:     "yazar",
+	Aliases: []string{"author"},
 	Short:   "Verilen yazar bilgilerini listeler",
 	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		res := gssc.GetAuthor(args[0])
+		res := srv.GetAuthor(args[0])
 		if len(res.Author.Nick) > 0 {
 			fmt.Println("Yazar Detaylari : " + res.Author.Nick)
 			fmt.Println("Nesil : " + res.Author.Genre)
