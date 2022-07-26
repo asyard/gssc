@@ -1,9 +1,9 @@
-package gssc
+package cmd
 
 import (
 	"fmt"
+	"github.com/asyard/gssc/pkg/gssc"
 	"github.com/spf13/cobra"
-	"gssc/pkg/gssc"
 	"strconv"
 )
 

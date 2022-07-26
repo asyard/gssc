@@ -1,4 +1,4 @@
-package gssc
+package cmd
 
 import (
 	"fmt"

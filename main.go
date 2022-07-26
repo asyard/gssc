@@ -1,7 +1,7 @@
 package main
 
-import "gssc/cmd/gssc"
+import "github.com/asyard/gssc/cmd"
 
 func main() {
-	gssc.Execute()
+	cmd.Execute()
 }

@@ -1,10 +1,10 @@
-package gssc
+package cmd
 
 import (
 	"fmt"
+	"github.com/asyard/gssc/pkg/gssc"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
-	"gssc/pkg/gssc"
 	"strconv"
 	"strings"
 )
