@@ -23,15 +23,17 @@ After obtaining source code (and go environment is installed), you may type one 
 
 for windows (64-bit)
 
-`GOOS=windows GOARCH=amd64 go build -o bin/gssc-v0.1-windows-amd64.exe`
+`GOOS=windows GOARCH=amd64 go build -o bin/gssc-v0.1.0-beta.1-windows-amd64.exe`
 
 for mac (64-bit)
 
-`GOOS=darwin GOARCH=amd64 go build -o bin/gssc-v0.1-darwin-amd64`
+`GOOS=darwin GOARCH=amd64 go build -o bin/gssc-v0.1.0-beta.1-darwin-amd64`
+
+`GOOS=darwin GOARCH=arm64 go build -o bin/gssc-v0.1.0-beta.1-darwin-arm64`
 
 for linux (64-bit)
 
-`GOOS=linux GOARCH=amd64 go build -o bin/gssc-v0.1-linux-amd64`
+`GOOS=linux GOARCH=amd64 go build -o bin/gssc-v0.1.0-beta.1-linux-amd64`
 
 for custom, first type `go tool dist list`. The result will be similar to (GOOS/GOARCH):
 

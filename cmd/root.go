@@ -1,11 +1,12 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/spf13/cobra"
 	"os"
 )
 
-var version = "0.1"
+var version = "0.1.0-beta.1"
 var rootCmd = &cobra.Command{
 	Use:     "gssc",
 	Version: version,
@@ -43,7 +44,9 @@ func Execute() {
 		//args := append([]string{"today"}, os.Args[1:]...)
 		//rootCmd.SetArgs(args)
 	}*/
-
+	if len(os.Args) < 2 {
+		fmt.Println(rootCmd.Help())
+	}
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
 	}
